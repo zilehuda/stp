@@ -1,13 +1,13 @@
 <?php
 
-include('../connection.php'); // Includes Login Script
+include('../connection.php');   // Includes Login Script
 
 class student {
 
 
   private $name="";
-  public $username="";
-  public $password="";
+  private $username="";
+  private $password="";
   private $email="";
 
   public function __constructor($usernam,$password)
@@ -18,21 +18,31 @@ class student {
   }
   public function SetUsername($username)
   {
-      $this->username=$username;
-  }
 
-  public function GetEmail()
-  {
-    return $this->name;
+      $this->username=$username;
   }
   public function GetUsername()
   {
-    return $this->name;
+    return $this->username;
+  }
+  public function SetPassword($password)
+  {
+
+      $this->password=$password;
   }
   public function GetPassword()
   {
-    return $this->name;
+    return $this->password;
   }
+
+  public function InsertStudentData()
+  {
+    include('../connection.php');
+    $sql = "INSERT INTO Student (userid, password) VALUES ('$this->username','$this->password')";
+     $stmt = sqlsrv_query( $conn, $sql );
+  }
+
+
 }
 
 

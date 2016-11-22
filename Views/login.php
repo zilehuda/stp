@@ -25,7 +25,7 @@ $first = 'Wrong Username / Password';
         <div class="col-sm-6 col-md-4 col-md-offset-4">
             <h1 class="text-center login-title">Sign in to continue</h1>
             <div class="account-wall">
-                <img class="profile-img" src="images/Stplogo.png"
+                <img class="profile-img" src="images/logo.png"
                     alt="">
                 <form class="form-signin" action="../Controller/loginController.php">
                 <input name="username" type="text" class="form-control" placeholder="username" required autofocus>

@@ -1,4 +1,7 @@
-
+<?php
+session_start();
+$_SESSION['logged']==false// Right at the top of your script
+?>
 
 
 <!DOCTYPE html>
@@ -26,10 +29,21 @@
 					<li><a href="events.html">Events</a></li>
  				</ul>
 				<ul>
-					<li><a href="gallery.html">Teachers</a></li>
-					<li ><a href="login.php">login</a></li>
-					<li><a href="Register.php" class="get-contact">Register</a></li>
-   				</ul>
+					<li><a href="gallery.html">Teachers</a>
+						<li class='active' style='float:right;'>
+  <?php
+  if($_SESSION['logged']==true)
+    {
+      echo '<li><a>'.$_SESSION["username"].'</a></li>';
+      echo '<li><a href="../Controller/logout.php">logout</a></li>';
+
+    }
+  elseif($_SESSION['logged']==false)
+    {
+      echo '<a href="registerform.html"><span>Login/Register</span></a></li>';
+    }
+  ?>
+</ul>
 			</nav>
 			<!-- / navigation -->
 		</div>
