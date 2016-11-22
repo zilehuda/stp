@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
@@ -25,7 +28,7 @@
 					<li><a href="gallery.html">Teachers</a></li>
 					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="#fancy" class="get-contact">Contact</a></li>
-					<li><a href="form.html">Sign Up</a></li>
+					<li><a href="register.php">Sign Up</a></li>
 					<li><a href="login.php">LogIn</a></li>
    				</ul>
 			</nav>

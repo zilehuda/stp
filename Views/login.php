@@ -1,3 +1,11 @@
+<?php
+$first = '';
+if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') {
+
+$first = 'Wrong Username / Password';
+}
+
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +27,8 @@
             <div class="account-wall">
                 <img class="profile-img" src="images/Stplogo.png"
                     alt="">
-                <form class="form-signin" action="student.php">
-                <input name="username" type="text" class="form-control" placeholder="Email address" required autofocus>
+                <form class="form-signin" action="../Controller/loginController.php">
+                <input name="username" type="text" class="form-control" placeholder="username" required autofocus>
                 <input name="password" type="password" class="form-control" placeholder="Password" required>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">
                     Sign in</button>
@@ -28,11 +36,13 @@
                     <input type="checkbox" value="remember-me">
                     Remember me
                 </label>
-                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+              <!--  <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span> -->
                 </form>
             </div>
-            <a href="#" class="text-center new-account">Create an account </a>
+            <a href="register.php" class="text-center new-account">Create an account </a>
+            <h1 class="text-center login-title"><?php echo htmlentities($first); ?></h1>
         </div>
+
     </div>
 </div>
 <script type="text/javascript">
