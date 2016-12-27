@@ -27,8 +27,8 @@ $first = 'Wrong Username / Password';
             <div class="account-wall">
                 <img class="profile-img" src="images/logo.png"
                     alt="">
-                <form class="form-signin" action="../Controller/loginController.php">
-                <input name="username" type="text" class="form-control" placeholder="username" required autofocus>
+                <form class="form-signin" action="../Controller/loginControllert.php">
+                <input name="email" type="text" class="form-control" placeholder="email" required autofocus>
                 <input name="password" type="password" class="form-control" placeholder="Password" required>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">
                     Sign in</button>

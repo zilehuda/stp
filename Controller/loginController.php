@@ -2,7 +2,7 @@
 include '../Model/student.php';
 
 
-$st = new student();
+<$st = new student();
   $st->SetUsername($_GET["username"]);
   $st->SetPassword($_GET["password"]);
 

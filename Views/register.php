@@ -18,6 +18,18 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <div class="container">
+  <div class="row">
+      <div class="panel-body">
+  <ul class="nav nav-tabs">
+   <li class="active"><a data-toggle="tab" href="#student">Student</a></li>
+   <li><a data-toggle="tab" href="#teacher">teacher</a></li>
+   </ul>
+ </div>
+ </div>
+
+ <div class="tab-content">
+ <div id="student" class="tab-pane fade in active">
     <div class="container">
 		<div class="row">
 			<div class="panel panel-primary" style="margin-top: 50px;">
@@ -55,6 +67,50 @@
 			</div>
 		</div>
 	</div>
+  </div>
+  <!--  tab two -->
+  <div id="teacher" class="tab-pane fade in active">
+     <div class="container">
+     <div class="row">
+       <div class="panel panel-primary" style="margin-top: 50px;">
+         <div class="panel-body">
+           <form class="form-signin" action="../Controller/RegisterController.php">
+             <div class="form-group">
+                 <h2>Create account</h2>
+               </div>
+               <div class="form-group">
+                 <label class="control-label" name="signupName">Your name</label>
+                 <input id="signupName" type="text" maxlength="50" class="form-control">
+               </div>
+               <div class="form-group">
+                 <label class="control-label" >Username</label>
+                 <input  type="text" maxlength="50" name="username" class="form-control">
+               </div>
+               <div class="form-group">
+                 <label class="control-label" for="signupEmail">Email</label>
+                 <input id="signupEmail" type="email" maxlength="50" class="form-control">
+               </div>
+               <div class="form-group">
+                 <label class="control-label" >Password</label>
+                 <input  type="password" name="password" maxlength="25" class="form-control" placeholder="at least 6 characters"
+                 length="40">
+               </div>
+               <div class="form-group">
+                 <button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
+               </div>
+               <p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>.</p>
+               <hr>
+               <p></p>Already have an account? <a href="login.php">Sign in</a></p>
+         <!--  <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span> -->
+           </form>
+         </div>
+       </div>
+     </div>
+   </div>
+   </div>
+
+  </div>
+  </div>
 
 <script type="text/javascript">
 
