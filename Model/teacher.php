@@ -6,9 +6,9 @@ class teacher {
 
 
   private $name="";
-  private $username="";
   private $password="";
   private $email="";
+  private $teacher_id="";
   public function SetEmail($email)
   {
 
@@ -27,6 +27,16 @@ class teacher {
   public function GetPassword()
   {
     return $this->password;
+  }
+  public function SetId($teacher_id)
+  {
+
+      $this->teacher_id=$teacher_id;
+  }
+  public function GetId()
+  {
+
+      return $this->teacher_id;
   }
 
 

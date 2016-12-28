@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['logged']==false// Right at the top of your script
+
 ?>
 
 
@@ -17,17 +17,11 @@ $_SESSION['logged']==false// Right at the top of your script
 	<![endif]-->
 </head>
 <body>
-
-
-		<?php require_once 'headerTeacher.php';?>
-	<!-- / header -->
-
+<?php require_once 'headerTeacher.php';?>
 	<div class="divider"></div>
-
 	<div class="content">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-        <?php include "profile.php" ?>
-	</div>
+		<?php require_once 'CourseList.php';?>
+</div>
 
 	<footer id="footer">
 

@@ -15,27 +15,7 @@
 </head>
 <body>
 
-	<header id="header">
-		<div class="container">
-			<a href="index.html" id="logo" title="HarrisonHighSchool">HarrisonHighSchool</a>
-			<div class="menu-trigger"></div>
-			<nav id="menu">
-				<ul>
-					<li><a href="events.html">Courses</a></li>
-					<li><a href="gallery.html">Students</a></li>
-					<li><a href="events.html">Events</a></li>
- 				</ul>
-				<ul>
-					<li><a href="gallery.html">Teachers</a></li>
-					<li ><a href="login.php">login</a></li>
-					<li><a href="Register.php" class="get-contact">Register</a></li>
-   				</ul>
-			</nav>
-			<!-- / navigation -->
-		</div>
-		<!-- / container -->
-
-	</header>
+	<?php require_once 'header.php';?>
 	<!-- / header -->
 
 	<div class="divider"></div>

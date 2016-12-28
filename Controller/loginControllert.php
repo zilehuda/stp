@@ -1,6 +1,7 @@
 <?php
-include '../Model/teacher.php';
+  include('../connection.php');
 
+    include('../Model/teacher.php');
 
   $st = new teacher();
   //$st->SetEmail($_GET["email"]);
@@ -12,9 +13,9 @@ include '../Model/teacher.php';
 //$email=$st->GetEmail();
 //$password=$st->GetPassword();
 
-$email='shayan';
+$email='shayan@';
 $password='1234';
-echo "$email";
+
 $sql = "select * from teacher where email='$email' and teacher_pass='$password'";
 
   $stmt = sqlsrv_query( $conn, $sql );
@@ -26,9 +27,12 @@ $sql = "select * from teacher where email='$email' and teacher_pass='$password'"
     $_SESSION['logged']=true;
      $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC);
      $name=$row['first_name'];
+     $_SESSION["teacher_id"]=$row['teacher_id'];
 
    $_SESSION["username"] = $name;
-  header("location:../Views/TeacherProfile.php");
+
+   $_SESSION["email"]=$email;
+  header("location:../Views/Teacherhome.php");
     echo "Entered Successfully";
 
       }
