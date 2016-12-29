@@ -6,25 +6,22 @@ class student {
 
 
   private $name="";
-  private $username="";
   private $password="";
   private $email="";
+  private $student_id="";
+  private $sql="";
+  private $stmt="";
 
-  public function __constructor($usernam,$password)
-  {
-      $this->username=$username;
-      $this->password=$password;
-
-  }
-  public function SetUsername($username)
+  public function SetEmail($email)
   {
 
-      $this->username=$username;
+      $this->email=$email;
   }
-  public function GetUsername()
+  public function GetEmail()
   {
-    return $this->username;
+    return $this->email;
   }
+
   public function SetPassword($password)
   {
 
@@ -34,12 +31,41 @@ class student {
   {
     return $this->password;
   }
+  public function SetId($student_id)
+  {
 
-  public function InsertStudentData()
+      $this->student_id=$student_id;
+  }
+  public function SetIdAndName()
   {
     include('../connection.php');
-    $sql = "INSERT INTO Student (userid, password) VALUES ('$this->username','$this->password')";
-     $stmt = sqlsrv_query( $conn, $sql );
+    $sql = "select * from student where email='$this->email' and student_pass='$this->password'";
+    $stmt = sqlsrv_query( $conn, $sql );
+    $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC);
+    $this->name=$row['first_name'];
+    $this->student_id=$row['student_id'];
+  }
+  public function GetId()
+  {
+    return $this->student_id;
+  }
+  public function GetName()
+  {
+    return $this->name;
+  }
+  public function CheckStudent()
+  {
+    include('../connection.php');
+    $sql = "select * from student where email='$this->email' and student_pass='$this->password'";
+    $stmt = sqlsrv_query( $conn, $sql );
+      if($stmt) {
+      $rows = sqlsrv_has_rows( $stmt );
+      return $rows;
+      }
+  }
+  public function dbConn()
+  {
+    # code...
   }
 
 
