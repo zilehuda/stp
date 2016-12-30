@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['logged']==false// Right at the top of your script
+// Right at the top of your script
 ?>
 
 
@@ -55,6 +55,9 @@ $_SESSION['logged']==false// Right at the top of your script
 	<div class="divider"></div>
 
 	<div class="content">
+
+			<?php require_once 'StudentCourses.php';?>
+			<?php require_once 'CourseSelect.php';?>
 	</div>
 
 	<footer id="footer">

@@ -13,11 +13,10 @@ if($st->CheckTeacher()==true)
     $_SESSION['logged']=true;
     $st->SetIdAndName();
     $_SESSION["teacher_id"]=$st->GetID();
-    echo $_SESSION["teacher_id"];
     $_SESSION["username"] = $st->GetName();
-    $_SESSION["email"]=$email;
+    $_SESSION["email"]=$st->GetEmail();
     header("location:../Views/Teacherhome.php");
-    echo "Entered Successfully";
+    //echo $_SESSION["teacher_id"];
       }
   else {
       $_SESSION['logged']=false;

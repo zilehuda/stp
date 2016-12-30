@@ -1,3 +1,7 @@
+<?php
+
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +76,7 @@
 <body>
 <div class="container">
     <div class="well well-sm">
-        <strong>My courses</strong>
+        <strong>Available courses</strong>
         <div class="btn-group">
             <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
             </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
@@ -81,11 +85,10 @@
     </div>
     <div id="products" class="row list-group">
       <?php
-      $teacher_id = $_SESSION["teacher_id"];
 
       include('../connection.php');
-      $query = "select course_id,course_title,course_description from course where teacher_id='$teacher_id'";
 
+      $query = "select course_id,course_title,course_description from course ";
       $stmt = sqlsrv_query( $conn, $query );
       while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
 
@@ -105,9 +108,7 @@
                       </div>
                       <div class="col-xs-12 col-md-6">
                         <a name="delete" class="btn btn-success"
-                        href="JavaScript:if(confirm('Confirm Delete?')==true)
-                        {window.location='../Controller/CourseListController.php?val=delete&course_id=<?php echo $row["course_id"];?>';}">Delete</a>
-
+                        href="../Controller/CourseSelectController.php?student_id=<?php echo $_SESSION['student_id'];?>&course_id=<?php echo $row["course_id"];?>">Enroll</a>
                       </div>
                   </div>
               </div>

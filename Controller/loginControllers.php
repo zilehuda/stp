@@ -12,7 +12,7 @@ if($st->CheckStudent()==true)
     session_start();
     $_SESSION['logged']=true;
     $st->SetIdAndName();
-    $_SESSION["teacher_id"]=$st->GetID();
+    $_SESSION["student_id"]=$st->GetID();
     echo $_SESSION["student_id"];
     $_SESSION["username"] = $st->GetName();
     $_SESSION["email"]=$email;
