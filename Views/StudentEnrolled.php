@@ -91,7 +91,7 @@
                                 <div class="lib-header-seperator"></div>
                             </div>
                             <div class="lib-row lib-desc">
-                                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor
+                                Lorem 
                             </div>
                         </div>
                     </div>
