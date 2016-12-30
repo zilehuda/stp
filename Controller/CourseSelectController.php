@@ -13,8 +13,8 @@ if(isset($_GET['course_id']))
    $course->Setid($_GET['course_id']);
 
    $sc = new StudentCourseClass($student,$course);
-   
    $sc->InsertTable();
+   header("location:../Views/Studenthome.php");
 }
 
 

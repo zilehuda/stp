@@ -20,6 +20,8 @@ session_start();
 <?php require_once 'headerTeacher.php';?>
 	<div class="divider"></div>
 	<div class="content">
+
+			<?php require_once 'StudentEnrolled.php';?>
 		<?php require_once 'CourseList.php';?>
 </div>
 

@@ -12,6 +12,17 @@ if($_GET["val"]=='delete')
     }
 
 }
+if($_GET["val"]=='confirm')
+{
+  $sql = "delete from student_course where course_id= ? and student_id = ?";
+  $params = array($_GET["course_id"],$_GET['student_id']);
+  $stmt = sqlsrv_query( $conn, $sql ,$params );
+    if($stmt) {
+    header("location:../Views/Teacherhome.php");
+    }
+
+
+}
 function DeleteCourse($course_id)
 {
 

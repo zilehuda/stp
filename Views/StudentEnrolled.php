@@ -77,29 +77,58 @@
 </head>
 <body>
 <div class="container">
+  <div class="well well-sm">
+      <strong> My Students </strong>
+
+  </div>
     <hr>
-            <div class="row row-margin-bottom">
-            <div class="col-md-5 no-padding lib-item" data-category="view">
-                <div class="lib-panel">
+            <div class="row row-margin-bottom ">
+
+
+              <?php
+              $teacher_id = $_SESSION["teacher_id"];
+
+              include('../connection.php');
+              $query = "select s.student_id,s.first_name,c.course_id,c.course_title
+                        from student s,course c,student_course sc where teacher_id='$teacher_id' and 
+                        sc.course_id= c.course_id and s.student_id=sc.student_id;";
+
+              $stmt = sqlsrv_query( $conn, $query );
+              while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+
+
+                 ?>
+
+            <div class="col-md-5 no-padding lib-item"   data-category="view">
+                <div class="lib-panel" style='padding-left: 20px';>
                     <div class="row box-shadow">
                         <div class="col-md-6">
                             <img class="lib-img-show" src="images/student.png">
                         </div>
                         <div class="col-md-6">
                             <div class="lib-row lib-header">
-                                Example library
+                                <?php echo $row['first_name']; ?>
                                 <div class="lib-header-seperator"></div>
                             </div>
-                            <div class="lib-row lib-desc">
-                                Lorem 
+                            <div class="lib-row lib-desc" style="padding-bottom: 15px;">
+                                  <h5>Course Name: <?php echo $row['course_title']; ?></h1>
+                              </div>
+                              <div class="lib-row lib-desc">
+                                  <h5>Reg Date:</h1>
+                              </div>
+                              <a style="float:right";name="Complete" class="btn btn-success"
+                              href="JavaScript:if(confirm('Confirm To Complete This Course?')==true)
+                              {window.location='../Controller/CourseListController.php?val=confirm&
+                              course_id=<?php echo $row["course_id"];?>&
+                              student_id=<?php echo $row["student_id"];?>';}">Complete</a>
                             </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="col-md-1"></div>
-        </div>
+            <?php } ?>
 
+        </div>
 </div>
 <script type="text/javascript">
 
