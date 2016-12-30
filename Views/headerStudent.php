@@ -13,22 +13,22 @@
 <body>
 	<header id="header">
 		<div class="container">
-			<a href="teacherhome.php" id="logo" title="HarrisonHighSchool">HarrisonHighSchool</a>
+			<a href="Studenthome.php" id="logo" title="HarrisonHighSchool">HarrisonHighSchool</a>
 			<div class="menu-trigger"></div>
 			<nav id="menu">
 				<ul>
-					<li><a href="AddCourse.php">Add Course</a></li>
-					<li><a href="gallery.html">add quiz</a></li>
+					<li><a href="studenthome.php">Home</a></li>
+					<li><a href="StudentCourse.php">My Courses</a></li>
  				</ul>
 				<ul style="padding-right:20px">
 
   <?php
   if($_SESSION['logged']==true)
     {
-			echo '<li><a href="events.html">my schedule</a></li>';
+			echo '<li><a href="">Post a Request</a></li>';
 
 
-      echo '<li><a href="teacherProfile.php">'.$_SESSION["username"].'</a></li>';
+      echo '<li><a href="Studentprofile.php">'.$_SESSION["username"].'</a></li>';
       echo '<li><a href="../Controller/logout.php">logout</a></li>';
 
     }

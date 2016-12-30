@@ -24,7 +24,7 @@ session_start();
 	<div class="content">
 
 			<?php require_once 'EnrolledCourses.php';?>
-			<?php require_once 'CourseSelect.php';?>
+			<?php include_once 'review.php'; 'review.php';?>
 	</div>
 
 	<footer id="footer">
@@ -53,5 +53,7 @@ session_start();
 	<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/review.js"></script>
+
 </body>
 </html>

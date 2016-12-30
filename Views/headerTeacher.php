@@ -25,7 +25,7 @@
   <?php
   if($_SESSION['logged']==true)
     {
-			echo '<li><a href="events.html">my schedule</a></li>';
+			echo '<li><a href="">My Students</a></li>';
 
 
       echo '<li><a href="teacherProfile.php">'.$_SESSION["username"].'</a></li>';

@@ -318,54 +318,8 @@ My graduation from Massey University with a Bachelor of Design majoring in visua
 <br />
 <div class="row">
 
-<form class="form-horizontal main_form text-left" action=" " method="post"  id="contact_form">
+<form class="form-horizontal main_form text-left" action=" ../Controller/teacherprofileController.php" method="get"  id="contact_form">
 <fieldset>
-
-
-<div class="form-group col-md-12">
-  <label class="col-md-10 control-label">First Name</label>  
-  <div class="col-md-12 inputGroupContainer">
-  <div class="input-group">
-  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-
-<!-- Text input-->
-
-<div class="form-group col-md-12">
-  <label class="col-md-10 control-label" >Last Name</label> 
-    <div class="col-md-12 inputGroupContainer">
-    <div class="input-group">
-  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-
-<!-- Text input-->
-       <div class="form-group col-md-12">
-  <label class="col-md-10 control-label">E-Mail</label>  
-    <div class="col-md-12 inputGroupContainer">
-    <div class="input-group">
-  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-
-
-<!-- Text input-->
-       
-
-
-<!-- Text input-->
-      
- 
-
- 
-
-
-
-
 
 
 
@@ -384,30 +338,14 @@ My graduation from Massey University with a Bachelor of Design majoring in visua
   <label class="col-md-10 control-label">Confiram Password</label>  
   <div class="col-md-12 inputGroupContainer">
   <div class="input-group">
-  <input  name="first_name" placeholder="Confiram Password" class="form-control"  type="password">
+  <input  name="pass" placeholder="Confirm Password" class="form-control"  type="password">
     </div>
   </div>
 </div>
+    
 
 
-<!-- radio checks -->
 
-
-<!-- upload profile picture -->
-<div class="col-md-12 text-left">
-<div class="uplod-picture">
-<span class="btn btn-default uplod-file">
-    Upload Photo <input type="file" />
-</span>
-<span class="btn btn-default uplod-file">
-    Upload Resume <input type="file" />
-</span>
-<span class="btn btn-default uplod-file">
-    Upload Video <input type="file" />
-</span>
-</div><!--uplod-picture close-->
-</div><!--col-md-12 close-->
-<!-- Button -->
 <div class="form-group col-md-10">
   <div class="col-md-6">
     <button type="submit" class="btn btn-warning submit-button" >Save</button>

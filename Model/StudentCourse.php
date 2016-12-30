@@ -29,7 +29,7 @@ class StudentCourseClass {
     include('../connection.php');
     //echo "string";
     $this->SetIDs();
-    $sql = "insert into student_course values('$this->course_id','$this->student_id','')";
+    $sql = "insert into student_course values('$this->course_id','$this->student_id',GETDATE())";
     echo $this->student_id." ".$this->course_id;
     $stmt = sqlsrv_query( $conn, $sql );
     if($stmt)

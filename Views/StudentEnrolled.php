@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <!-- for a teacher-->
     <title>Beautiful image card with description - Bootsnipp.com</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
@@ -90,7 +90,7 @@
 
               include('../connection.php');
               $query = "select s.student_id,s.first_name,c.course_id,c.course_title
-                        from student s,course c,student_course sc where teacher_id='$teacher_id' and 
+                        from student s,course c,student_course sc where teacher_id='$teacher_id' and
                         sc.course_id= c.course_id and s.student_id=sc.student_id;";
 
               $stmt = sqlsrv_query( $conn, $query );
