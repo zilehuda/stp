@@ -63,10 +63,7 @@ class teacher {
       return $rows;
       }
   }
-  public function dbConn()
-  {
-    # code...
-  }
+
 
 
 }

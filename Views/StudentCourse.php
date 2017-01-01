@@ -24,8 +24,46 @@ session_start();
 	<div class="content">
 
 			<?php require_once 'EnrolledCourses.php';?>
-			<?php include_once 'review.php'; 'review.php';?>
-	</div>
+
+			  <!-- start of review section -->
+				<div class="container">
+			  <div class="well well-sm">
+			      <strong> My Students </strong>
+
+			  </div>
+			    <hr>
+				<div class="row" style="margin-top:40px;">
+			    <?php
+
+			    include('../connection.php');
+			    $query = "select t.first_name,c.course_title,cc.course_id from teacher t,course c,CompCourse cc where
+										cc.course_id=c.course_id and t.teacher_id=c.teacher_id and cc.student_id='1' and cc.f_check='f'";
+
+			    $stmt = sqlsrv_query( $conn, $query );
+			    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+			       ?>
+			    <!-- start -->
+					<div class="col-md-6">
+			    	<div class="well well-sm">
+
+			            <div class="text-right">
+			                <h4 style="float:left">
+			                    teacher name: <?php echo $row['first_name']; ?>, course: <?php echo $row['course_title']; ?>
+			                </h4>
+											<a name="delete" class="btn btn-success"
+											href="../Controller/ReviewController.php?val=review_request&course_id=<?php echo $row["course_id"];?>
+											&course_title=<?php echo $row["course_title"];?>">
+											leave a review</a>
+			            </div>
+
+			        </div>
+					</div>
+			    <!-- end -->
+			    <?php } ?>
+
+				</div>
+				</div>
+				  <!-- end of review-->
 
 	<footer id="footer">
 
