@@ -21,6 +21,7 @@ session_start();
 	<div class="divider"></div>
 	<div class="content">
 
+			<?php require_once 'teachersReview.php';?>
 			<?php require_once 'StudentEnrolled.php';?>
 		<?php require_once 'CourseList.php';?>
 </div>

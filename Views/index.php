@@ -56,10 +56,10 @@ width: 100%; /* Set width to 100% */
 				<ul>
 					<li><a href="events.html">Courses</a></li>
 					<li><a href="gallery.html">Students</a></li>
-					<li><a href="events.html">Events</a></li>
+					<li><a href="events.html"></a></li>
  				</ul>
 				<ul>
-					<li><a href="gallery.html">Teachers</a></li>
+					<li><a href="gallery.html"></a></li>
 					<li ><a href="login.php">Login</a></li>
 					<li><a href="Register.php" class="get-contact">Register</a></li>
    				</ul>

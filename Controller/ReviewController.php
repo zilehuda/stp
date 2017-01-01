@@ -22,6 +22,7 @@ $review->SetIDs();
 
 $review->InsertTable();
 $review->SetYes();
+header("location:../Views/studenthome.php");
 
 
 

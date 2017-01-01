@@ -13,8 +13,19 @@ if(isset($_GET['course_id']))
    $course->Setid($_GET['course_id']);
 
    $sc = new StudentCourseClass($student,$course);
-   $sc->InsertTable();
-   header("location:../Views/Studenthome.php");
+
+   if($sc->InsertTable())
+   {
+     $_SESSION['email'] = $course->GetEmailofTeacher();
+     echo $_SESSION['email'];
+     header("location:../Views/EmailForm.php");
+
+   }
+  else {
+    {
+      header("location:../Views/studenthome.php");
+    }
+  }
 }
 
 
