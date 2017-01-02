@@ -5,13 +5,23 @@ include('../connection.php');   // Includes Login Script
 class student {
 
 
-  private $name="";
-  private $password="";
+  private $fname="";
+    private $lname="";
+  public $password="";
   private $email="";
   private $student_id="";
   private $sql="";
   private $stmt="";
+public function Setfname($fname)
+  {
 
+      $this->fname=$fname;
+  }
+    public function Setlname($lname)
+  {
+
+      $this->lname=$lname;
+  }
   public function SetEmail($email)
   {
 
@@ -42,7 +52,7 @@ class student {
     $sql = "select * from student where email='$this->email' and student_pass='$this->password'";
     $stmt = sqlsrv_query( $conn, $sql );
     $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC);
-    $this->name=$row['first_name'];
+    $this->fname=$row['first_name'];
     $this->student_id=$row['student_id'];
   }
   public function GetId()
@@ -51,7 +61,7 @@ class student {
   }
   public function GetName()
   {
-    return $this->name;
+    return $this->fname;
   }
   public function CheckStudent()
   {
@@ -63,7 +73,26 @@ class student {
       return $rows;
       }
   }
-  
+  public function dbConn()
+  {
+    # code...
+  }
+     public function InsertStudentData()
+  {
+    include('../connection.php');
+    //  $sql = "INSERT INTO student VALUES ('dsf','sdf','sdf','sdf')";
+      
+    $sql = "INSERT INTO student VALUES ('$this->fname','$this->lname','$this->email','$this->password')";
+      $stmt = sqlsrv_query( $conn, $sql );
+      echo $this->getpassword();
+      if($stmt)
+      {
+         echo $this->fname; 
+      }
+      
+     
+  }
+    
 
 
 }

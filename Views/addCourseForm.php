@@ -46,6 +46,16 @@
         <div class="col-xs-12">
             <div class="col-md-12">
                 <h3>Add Category</h3>
+                <div class="form-group">
+                    <select  name = "cat" class="form-control"  id = "myList">
+               <option  value = "Math">Math</option>
+               <option value = "Computer Science">Computer Science</option>
+               <option value = "Biology">three</option>
+               <option value = "English">four</option>
+             </select>
+
+                </div>
+
 
                 <button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button>
             </div>

@@ -103,6 +103,7 @@ $first = 'Wrong Username / Password';
 
     </div>
   </div>
+    </div>
 
 <script type="text/javascript">
 </script>

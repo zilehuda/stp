@@ -28,7 +28,7 @@ session_start();
 			  <!-- start of review section -->
 				<div class="container">
 			  <div class="well well-sm">
-			      <strong> My Students </strong>
+			      <strong> Pending Reviews </strong>
 
 			  </div>
 			    <hr>

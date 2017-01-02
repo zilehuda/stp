@@ -1,6 +1,7 @@
 <?php
 session_start();
-$_SESSION['logged']==false// Right at the top of your script
+
+echo $_SESSION["teacher_id"];
 ?>
 
 

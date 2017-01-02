@@ -10,6 +10,7 @@ class Course {
   private $description="";
   private $teacher_id="";
   private $record="";
+  private $category="";
 
   public function Setid($id)
   {
@@ -52,16 +53,29 @@ class Course {
 
       $this->description=$description;
   }
+  public function SetCategory($category)
+  {
+
+      $this->category=$category;
+  }
+
   public function InsertCourseData()
   {
 
     include('../connection.php');
     $teacher_id = $_SESSION["teacher_id"];
-
+    //insert into course table
    $sql = "INSERT INTO course VALUES ('$this->title','$this->description','$teacher_id')";
-
    $stmt = sqlsrv_query( $conn, $sql );
-
+   //get course_id
+   $sql = "select course_id from course where teacher_id='$teacher_id' and course_title='$this->title'";
+   $stmt = sqlsrv_query( $conn, $sql );
+   $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC);
+   //set that id
+   $this->Setid($row['course_id']);
+   //insert a category
+   $sql = "INSERT INTO Category VALUES ('$this->course_id','$this->category')";
+   $stmt = sqlsrv_query( $conn, $sql );
   }
 
 

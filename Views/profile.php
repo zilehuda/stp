@@ -218,13 +218,13 @@ integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJ
 
 <div class="col-md-5 col-sm-5 col-xs-12">
 <?php echo '<h5>'.$_SESSION["username"].'</h5>' ?>
-<p>Web Designer / Develpor </p>
+<p>Web Designer / Develper </p>
 <ul>
 <li><span class="glyphicon glyphicon-briefcase"></span> 5 years</li>
-<li><span class="glyphicon glyphicon-map-marker"></span> U.S.A.</li>
-<li><span class="glyphicon glyphicon-home"></span> 555 street Address,toedo 43606 U.S.A.</li>
-<li><span class="glyphicon glyphicon-phone"></span> <a href="#" title="call">(+021) 956 789123</a></li>
-<li><span class="glyphicon glyphicon-envelope"></span><a href="#" title="mail">jenifer123@gmail.com</a></li>
+<li><span class="glyphicon glyphicon-map-marker"></span> PAKISTAN</li>
+<li><span class="glyphicon glyphicon-home"></span> A-26 SECTOR 14-B NORTH NAZIMABAD</li>
+<li><span class="glyphicon glyphicon-phone"></span> <a href="#" title="call">0092 3152725272</a></li>
+
 
 </ul>
 

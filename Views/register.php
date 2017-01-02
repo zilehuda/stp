@@ -39,16 +39,16 @@
   							<h2>Create account</h2>
   						</div>
   						<div class="form-group">
-  							<label class="control-label" name="signupName">Your name</label>
-  							<input id="signupName" type="text" maxlength="50" class="form-control">
+  							<label class="control-label" >first name</label>
+  							<input name="fname" id="signupName" type="text" maxlength="50" class="form-control">
   						</div>
               <div class="form-group">
-  							<label class="control-label" >Username</label>
-  							<input  type="text" maxlength="50" name="username" class="form-control">
+  							<label class="control-label" >last name</label>
+  							<input  type="text" maxlength="50" name="lname" class="form-control">
   						</div>
   						<div class="form-group">
   							<label class="control-label" for="signupEmail">Email</label>
-  							<input id="signupEmail" type="email" maxlength="50" class="form-control">
+  							<input name ="email" id="signupEmail" type="email" maxlength="50" class="form-control">
   						</div>
   						<div class="form-group">
   							<label class="control-label" >Password</label>
@@ -56,11 +56,11 @@
                 length="40">
   						</div>
   						<div class="form-group">
+                            <input type="hidden" name="student" value="someValue"/>
   							<button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
   						</div>
-  						<p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>.</p>
   						<hr>
-  						<p></p>Already have an account? <a href="login.php">Sign in</a></p>
+  						<p></p>Already have an account? <a href="login.php">Sign in</a>
         <!--  <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span> -->
           </form>
 				</div>
@@ -80,15 +80,15 @@
                </div>
                <div class="form-group">
                  <label class="control-label" name="signupName">Your name</label>
-                 <input id="signupName" type="text" maxlength="50" class="form-control">
+                 <input name="fname" id="signupName" type="text" maxlength="50" class="form-control">
                </div>
                <div class="form-group">
-                 <label class="control-label" >Username</label>
-                 <input  type="text" maxlength="50" name="username" class="form-control">
+                 <label class="control-label" >last Name</label>
+                 <input  name="lname" type="text" maxlength="50" name="username" class="form-control">
                </div>
                <div class="form-group">
                  <label class="control-label" for="signupEmail">Email</label>
-                 <input id="signupEmail" type="email" maxlength="50" class="form-control">
+                 <input name="email" id="signupEmail" type="email" maxlength="50" class="form-control">
                </div>
                <div class="form-group">
                  <label class="control-label" >Password</label>
@@ -96,11 +96,12 @@
                  length="40">
                </div>
                <div class="form-group">
+                   <input type="hidden" name="teacher" value="someValue"/>
                  <button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
                </div>
-               <p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>.</p>
+               
                <hr>
-               <p></p>Already have an account? <a href="login.php">Sign in</a></p>
+               <p></p>Already have an account? <a href="login.php">Sign in</a>
          <!--  <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span> -->
            </form>
          </div>

@@ -6,7 +6,9 @@ include '../Model/Course.php';
   $course = new Course();
   $course->SetTitle($_GET["title"]);
   $course->Setdescription($_GET["description"]);
+  $course->SetCategory($_GET["cat"]);
   $course->InsertCourseData();
+
 
 //$st.SetUsername($_GET["username"]);
 //$query = mysql_query("select * from login where password='$password' AND username='$username'", $connection);

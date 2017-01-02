@@ -24,7 +24,7 @@
                 <h3>Your Review</h3>
                 <div class="form-group">
                     <label class="control-label"></label>
-                    <input name="msg" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Title"  />
+                    <input name="msg" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Your Review   "  />
                 </div>
                 <button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button>
             </div>

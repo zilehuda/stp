@@ -5,13 +5,23 @@ include('../connection.php');   // Includes Login Script
 class teacher {
 
 
-  private $name="";
+  private $fname="";
+     private $lname="";
   private $password="";
   private $email="";
   private $teacher_id="";
   private $sql="";
   private $stmt="";
+ public function Setfname($fname)
+  {
 
+      $this->fname=$fname;
+  }
+     public function Setlname($lname)
+  {
+
+      $this->lname=$lname;
+  }
   public function SetEmail($email)
   {
 
@@ -51,7 +61,7 @@ class teacher {
   }
   public function GetName()
   {
-    return $this->name;
+    return $this->fname;
   }
   public function CheckTeacher()
   {
@@ -63,7 +73,22 @@ class teacher {
       return $rows;
       }
   }
-
+   public function InsertteacherData()
+  {
+    include('../connection.php');
+    //  $sql = "INSERT INTO student VALUES ('dsf','sdf','sdf','sdf')";
+      
+    $sql = "INSERT INTO teacher VALUES ('$this->fname','$this->lname','$this->email','$this->password')";
+      $stmt = sqlsrv_query( $conn, $sql );
+      echo $this->getpassword();
+      if($stmt)
+      {
+         echo $this->fname; 
+      }
+      
+     
+  }
+   
 
 
 }
